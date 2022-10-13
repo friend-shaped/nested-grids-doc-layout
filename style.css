@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+  background-color: #fff;
+}
+
+#maincontainer {
+  display: grid;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-rows: 10rem 1fr 1fr 20rem;
+  grid-template-areas:
+    "head head head"
+    ". main ."
+    "sect sect sect"
+    "foot foot foot";
+}
+
+header {
+  height: 10rem;
+  background-color: #d2d1d1;
+  grid-area: head;
+  width: 100%;
+}
+
+#headcontainer {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  margin-left: 10vw;
+}
+
+#logo {
+  background-image: url(./images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6rem;
+}
+
+nav ul {
+  font-size: 1.4rem;
+  display: flex;
+  width: 33%;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0 2rem;
+  line-height: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+main {
+  height: 64rem;
+  grid-area: main;
+  gap: 1.5rem;
+  margin: 0.5rem 0;
+  margin-bottom: -0.1rem;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 90px 25px 25px 100px 100px 80px;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img2 img3 img4"
+    "img5 img6 img3 img4"
+    "img5 img6 img3 img8"
+    "img5 img6 img7 img8"
+    "img9 img6 img7 img8"
+    "img9 img10 img7 img8";
+}
+
+.img1 {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  grid-area: img1;
+}
+
+.img2 {
+  background-image: url("../images/2.jpg");
+  background-size: cover;
+  grid-area: img2;
+}
+
+.img3 {
+  background-image: url("../images/3.jpg");
+  background-size: cover;
+  grid-area: img3;
+}
+
+.img4 {
+  background-image: url("../images/4.jpg");
+  background-size: cover;
+  grid-area: img4;
+}
+
+.img5 {
+  background-image: url("../images/5.jpg");
+  background-size: cover;
+  grid-area: img5;
+}
+
+.img6 {
+  background-image: url("../images/6.jpg");
+  background-size: cover;
+  grid-area: img6;
+}
+
+.img7 {
+  background-image: url("../images/7.jpg");
+  background-size: cover;
+  grid-area: img7;
+}
+
+.img8 {
+  background-image: url("../images/8.jpg");
+  background-size: cover;
+  grid-area: img8;
+}
+
+.img9 {
+  background-image: url("../images/9.jpg");
+  background-size: cover;
+  grid-area: img9;
+}
+
+.img10 {
+  background-image: url("../images/10.jpg");
+  background-size: cover;
+  grid-area: img10;
+}
+
+section {
+  grid-area: sect;
+  display: grid;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+#sectContainer {
+  padding-bottom: 1rem;
+  display: grid;
+  margin: 0 10vw;
+  gap: 0.5rem;
+  background-color: #f5f5f5;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "d1 d2 d3"
+    ". d4 d5"
+    ". . d6";
+}
+
+#sectContainer div {
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  line-height: 200px;
+  text-shadow: 2px 2px 5px black;
+}
+
+#d1 {
+  grid-area: d1;
+  background-color: red;
+}
+
+#d2 {
+  grid-area: d2;
+  background-color: orange;
+}
+
+#d3 {
+  grid-area: d3;
+  background-color: violet;
+}
+
+#d4 {
+  grid-area: d4;
+  background-color: yellow;
+}
+
+#d5 {
+  grid-area: d5;
+  background-color: green;
+}
+
+#d6 {
+  grid-area: d6;
+  background-color: slategray;
+}
+
+footer {
+  grid-area: foot;
+  height: 20rem;
+  background-color: #505050;
+  display: grid;
+  justify-content: flex-end;
+  align-content: center;
+  grid-template-columns: 2fr repeat(3, 30rem) 1fr;
+  column-gap: 5rem;
+  grid-template-rows: 150px;
+  row-gap: 2rem;
+  grid-template-areas: ". f1 f2 f3 .";
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  color: rgb(202, 200, 197);
+  border-color: rgb(130, 125, 117);
+  box-shadow: rgb(209 207 205) 1px 1px 5px;
+  border-radius: 5px;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+#f1 {
+  grid-area: f1;
+}
+
+#f2 {
+  grid-area: f2;
+}
+
+#f3 {
+  grid-area: f3;
+}
